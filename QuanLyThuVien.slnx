@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Tests/">
+    <Project Path="Tests/Library.IntegrationTests/Library.IntegrationTests.csproj" />
+    <Project Path="Tests/Library.UnitTests/Library.UnitTests.csproj" />
+    <Project Path="Tests/Presentation.SmokeTests/Presentation.SmokeTests.csproj" />
+  </Folder>
+  <Project Path="BusinessLayer/BusinessLayer.csproj" />
+  <Project Path="DataLayer/DataLayer.csproj" />
+  <Project Path="Presentation/Presentation.csproj" />
+</Solution>

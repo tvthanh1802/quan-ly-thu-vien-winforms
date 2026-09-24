@@ -1,0 +1,125 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Forms\**" />
+    <EmbeddedResource Remove="Forms\**" />
+    <None Remove="Forms\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.104.2" />
+    <PackageReference Include="FontAwesome.Sharp" Version="6.6.0" />
+    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.28" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.28">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.28" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.28">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="WinForms.DataVisualization" Version="1.10.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FrmChiTietThongBao.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="Models\FrmChiTietThongBao.Designer.cs"><DependentUpon>FrmChiTietThongBao.cs</DependentUpon><DesignTime>True</DesignTime><AutoGen>True</AutoGen></Compile>
+    <Compile Update="Models\FrmPhanQuyenNhanVien.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="Models\FrmPhanQuyenNhanVien.Designer.cs"><DependentUpon>FrmPhanQuyenNhanVien.cs</DependentUpon><DesignTime>True</DesignTime><AutoGen>True</AutoGen></Compile>
+    <Compile Update="Models\FrmThemThongBao.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="Models\FrmThemThongBao.Designer.cs"><DependentUpon>FrmThemThongBao.cs</DependentUpon><DesignTime>True</DesignTime><AutoGen>True</AutoGen></Compile>
+    <Compile Update="Models\FrmXacNhanXoaThongBao.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="Models\FrmXacNhanXoaThongBao.Designer.cs"><DependentUpon>FrmXacNhanXoaThongBao.cs</DependentUpon><DesignTime>True</DesignTime><AutoGen>True</AutoGen></Compile>
+    <Compile Update="Models\FrmSuaNhanVien.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="Models\FrmSuaNhanVien.Designer.cs"><DependentUpon>FrmSuaNhanVien.cs</DependentUpon><DesignTime>True</DesignTime><AutoGen>True</AutoGen></Compile>
+    <Compile Update="Models\FrmThemNhanVien.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="Models\FrmThemNhanVien.Designer.cs"><DependentUpon>FrmThemNhanVien.cs</DependentUpon><DesignTime>True</DesignTime><AutoGen>True</AutoGen></Compile>
+    <Compile Update="Controls\UcThongBao.cs" />
+    <Compile Update="Controls\UcThongBao.Designer.cs"><DependentUpon>UcThongBao.cs</DependentUpon><DesignTime>True</DesignTime><AutoGen>True</AutoGen></Compile>
+    <Compile Update="Controls\UcThongBaoItem.cs"><SubType>UserControl</SubType></Compile>
+    <Compile Update="Controls\UcThongBaoItem.Designer.cs"><DependentUpon>UcThongBaoItem.cs</DependentUpon><DesignTime>True</DesignTime><AutoGen>True</AutoGen></Compile>
+    <Compile Update="Controls\UcTongQuan.cs"><SubType>UserControl</SubType></Compile>
+    <Compile Update="Controls\UcTongQuan.Designer.cs"><DependentUpon>UcTongQuan.cs</DependentUpon><DesignTime>True</DesignTime><AutoGen>True</AutoGen></Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Models\FrmChiTietThongBao.resx"><DependentUpon>FrmChiTietThongBao.cs</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Update="Models\FrmThemThongBao.resx"><DependentUpon>FrmThemThongBao.cs</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Update="Models\FrmXacNhanXoaThongBao.resx"><DependentUpon>FrmXacNhanXoaThongBao.cs</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Update="Models\FrmSuaNhanVien.resx"><DependentUpon>FrmSuaNhanVien.cs</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Update="Models\FrmThemNhanVien.resx"><DependentUpon>FrmThemNhanVien.cs</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Update="Controls\UcThongBao.resx"><DependentUpon>UcThongBao.cs</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Update="Controls\UcThongBaoItem.resx"><DependentUpon>UcThongBaoItem.cs</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Update="Controls\UcTongQuan.resx"><DependentUpon>UcTongQuan.cs</DependentUpon></EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\book2 - Copy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\book2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <!-- Copy toàn bộ ảnh bìa sang thư mục chạy để dgvSach đọc được theo tên file lưu trong CSDL. -->
+    <None Update="Images\BookCovers\**\*.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\BookCovers\**\*.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\BookCovers\**\*.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\BookCovers\**\*.webp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\BookCovers\**\*.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <!-- Avatar độc giả/nhân viên được CSDL tham chiếu bằng đường dẫn Presentation/Images/Avatars/... -->
+    <None Update="Images\Avatars\Readers\**\*.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\Avatars\Staff\**\*.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <!-- Ảnh nền và icon sidebar EPU được copy sang thư mục chạy để FrmMain hiển thị đúng cả Runtime và Designer. -->
+    <None Update="Images\sidebar_epu_660x2498.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\SidebarIcons\**\*.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
